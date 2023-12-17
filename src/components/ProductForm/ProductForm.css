@@ -1,0 +1,39 @@
+.productform{
+    width: 100%;
+    background: #E9D8A6;
+    padding: 100px 0;
+}
+form{
+    width: 600px;
+    background: white;
+    margin: auto;
+    padding: 40px 60px;
+    
+}
+.productform_fields{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+.productform_fields input{
+    height: 40px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #ADB5BD;
+    outline: none;
+    color: #495057;
+    font-size: 15px;
+}
+
+.productform button{
+    width: 100%;
+    height: 50px;
+    color: white;
+    background: #AE2012;
+    margin-top: 30px;
+    border: none;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
