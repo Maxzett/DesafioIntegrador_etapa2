@@ -30,12 +30,15 @@ const ProductForm = ({ fetchData }) => {
     if (inputReference === ProductFormDictionary.IMAGE) {
       setProductFormValues((prevState) => ({ ...prevState, image: value }));
     }
+    if (inputReference === ProductFormDictionary.CATEGORY) {
+      setProductFormValues((prevState) => ({ ...prevState, category: value }));
+    }
   };
 
   const handleSubmitForm = async () => {
     try {
       const response = await fetch(
-        "https://65678e4d64fcff8d7310950f.mockapi.io/All_Products",
+        `${import.meta.env.VITE_BACKEND_URL}product`,
         {
           method: "POST",
           headers: {
@@ -105,12 +108,22 @@ const ProductForm = ({ fetchData }) => {
             }
           />
           <input
-            type="file"
+            type="text"
             placeholder={"Photo"}
             onChange={(e) =>
               handleUpdateProductFormValues(
                 e.target.value,
                 ProductFormDictionary.IMAGE
+              )
+            }
+          />
+          <input
+            type="text"
+            placeholder={"Category"}
+            onChange={(e) =>
+              handleUpdateProductFormValues(
+                e.target.value,
+                ProductFormDictionary.CATEGORY
               )
             }
           />

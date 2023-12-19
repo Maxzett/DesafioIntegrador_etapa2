@@ -1,6 +1,5 @@
 import React, { useEffect, useState} from 'react'
 import Header from '../components/Header/Header'
-import Offers from '../components/Offers/Offers'
 import NewCollections from '../components/NewCollections/NewCollections'
 import NewsLetter from '../components/NewsLetter/NewsLetter'
 
@@ -15,7 +14,7 @@ const Home = () => {
   },[]);
 
   const fetchProductsData = async () => {
-    const url = "https://65678e4d64fcff8d7310950f.mockapi.io/All_Products";
+    const url = `${import.meta.env.VITE_BACKEND_URL}product`;
 
     try {
       const response = await fetch(url);
