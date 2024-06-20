@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   const fetchProductsData = async () => {
-    const url = "https://65678e4d64fcff8d7310950f.mockapi.io/All_Products";
+    const url = `${import.meta.env.VITE_BACKEND_URL}product`;
 
     try {
       const response = await fetch(url);
